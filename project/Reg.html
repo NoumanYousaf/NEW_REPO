@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <title>Registration Form</title>
+	  <link rel="stylesheet" type="text/css" href="C:\Users\Usman Idrees\Desktop\style.css">
+</head>
+    <body>
+		 <header id="ha">
+		   <div class="main">
+			<ul>
+				<li><a href="C:\Users\Usman Idrees\Desktop\T.html">Home</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Gallery</a></li>
+				<li><a href="#">About</a></li>
+				<li class="active"><a href="C:\Users\Usman Idrees\Desktop\Reg.html">Register</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		   </div>
+		   <br><br>
+			 <h1 id="ht">Registration</h1>
+			<div class="register">
+			<form id="register">
+			  <h2>Register Here</h2>
+			  <label>First Name:</label><br>
+			  <input type="text" name="FName" class="form-control" id="name" placeholder="FirstName"><br><br>
+			  <label>Last Name:</label><br>
+			  <input type="text" name="LName" class="form-control" id="name" placeholder="LastName"><br><br>
+			  <label>Address:</label><br>
+			  <input type="address" name="Address" class="form-control" id="name" placeholder="Address"><br><br>
+			  <label>Mobile Number:</label><br>
+			  <input type="number" name="num" class="form-control" id="name" placeholder="MobileNumber"><br><br>
+			  <label>Email:</label><br>
+			  <input type="email" name="Email" class="form-control" id="name" placeholder="Email"><br><br>
+			  <label>Gender:</label><br>
+			  <input type="radio" name="gender" value="m"><label>Male</label>
+			  <input type="radio" name="gender" value="f"><label>Female</label>
+			  <input type="radio" name="gender" value="o"><label>Other</label><br><br>
+			  <button type="submit" id="sub" onclick="Validation()">Register</button>
+			</form>
+			</div>
+		 </header>
+		 <script>
+	        function Validation()
+			{
+				let fnameformat=/^[a-zA-Z]+$/g;
+				let inputName=document.getElementByName("FName").value;
+				let result=inputName.match(fnameformat);
+				if(result)
+				{
+					alert("Valid First Name");
+				}
+				else
+				{
+				    alert("You have entered an invalid first name!");
+				}
+			    
+				let lnameformat=/^[a-zA-Z]+$/g;
+				let inputName=document.getElementByName("LName").value;
+				let result=inputName.match(lnameformat);
+				if(result)
+				{
+					alert("Valid Last Name");
+				}
+				else
+				{
+				    alert("You have entered an invalid last name!");
+				}
+			
+				let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+				let inputEmail=document.getElementByName("Email").value;
+				let result1=inputName.match(mailformat);
+				if(result1)
+				{
+					alert("Valid Email");
+				}
+				else
+				{
+					alert("You have entered an invalid email address!");
+				F
+				
+				let phonenumberformat = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/g;  
+				let inputph=document.getElementByName("num").value;
+				let result2=inputName.match(phonenumberformat);
+				if(result2)
+				{
+					alert("Valid Phone Number");
+				}
+				else
+				{
+					alert("You have entered an invalid phone number!");
+				}
+				
+				let addressformat=/^[a-zA-Z0-9\s,'-]*$/g;
+				let inputaddress=document.getElementByName("Address").value;
+				let result2=inputName.match(mailformat);
+				if(result2)
+				{
+					alert("Valid Address");
+				}
+				else
+				{
+					alert("You have entered an invalid address!");
+				}
+				
+			}
+	</script>
+
+	</body>
+</html>
